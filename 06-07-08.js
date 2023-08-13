@@ -11,25 +11,33 @@ function crearClasePersona() {
       // Inicializar las propiedades de la persona con los valores recibidos como argumento
 
       // Tu código aca:
+        this.nombre=nombre;
+        this.edad=edad;
+        this.hobbies=[];
+        this.amigos=[];
 
     }
-
+   
     addFriend(nombre, edad) {
       // El método 'addFriend' recibe un string 'nombre' y un entero 'edad' y debe agregar un objeto:
       // { nombre: nombre, edad: edad} al arreglo de amigos de la persona.
       // No debe retornar nada.
 
       // Tu código aca:
-
+      this.nombre=nombre;
+      this.edad=edad;
+      
     }
+
 
     addHobby(hobby) {
       // El método 'addHobby' recibe un string 'hobby' y debe agregarlo al arreglo de hobbies de la persona.
       // No debe retornar nada.
 
       // Tu código aca:
-
+      this.hobbies.push(hobby);
     }
+
     getFriends() {
       // El método 'getFriends' debe retornar un arreglo con sólo los nombres del arreglo de amigos
       // de la persona.
@@ -38,7 +46,8 @@ function crearClasePersona() {
       // persona.getFriends() debería devolver ['martin', 'toni']
 
       // Tu código aca:
-
+      var Am=[{nombre: 'martin', edad: 31},{nombre: 'toni', edad: 33}]
+      this.amigos=Am;
     }
 
     getHobbies() {
@@ -47,7 +56,8 @@ function crearClasePersona() {
       // persona.getHobbies() debe devolver ['correr', 'dormir', 'nadar']
 
       // Tu código aca:
-
+      var Hob=['correr', 'dormir', 'nadar']
+      this.hobbies=Hob;
     }
 
     getPromedioEdad() {
@@ -67,11 +77,33 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      var Ams=[{ nombre: 'toni', edad: 33 },{ nombre: 'Emi', edad: 25 }]
+
+     var p=0,n=Ams.length;
+      for (let i=0;i<n;i++){
+        p=Ams[i].edad+p;
+
+      }
+      return p=p/n;
+      
     }
   };
-
+let NA= new Persona();
+  NA.addFriend('Alx',40); //,'None',amigos={nombre:'Tom',edad:26}
+  NA.addHobby('Rugby');
+  NA.getFriends();
+  NA.getHobbies();
+  console.log(NA);
+  var prom=NA.getPromedioEdad();
+  console.log(prom);
   return Persona;
+  
+  
 }
+
+crearClasePersona();
+//console.log(crearClasePersona());    
+  
 
 // No modifiques nada debajo de esta linea //
 

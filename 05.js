@@ -15,7 +15,17 @@ function pluck(array, propiedad) {
 
   // Tu código acá:
 
+  
+for (let i=0;i<array.length;i++){
+  var prod=array.map(num=>{return array[i][propiedad]})
+  console.log(prod[i]);  
 }
+
+
+}
+
+var productos = [{ name: 'TV LCD', price: 100}, { name: 'Computadora', price: 500 }]
+pluck(productos, 'name');
 
 // No modifiques nada debajo de esta linea //
 

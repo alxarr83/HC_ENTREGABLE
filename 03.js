@@ -14,9 +14,18 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
-  
+
+  var n=amigos.length;
+
+  for (let i=0;i<n;i++)
+    if(nombre==amigos[i].nombre)
+    console.log(amigos[i].nombre);
+ 
+   
 }
 
+var amigos = [{ nombre: 'toni', edad: 33 } , { nombre: 'Emi', edad: 25 },{ nombre: 'Emi', edad: 40 }];
+buscarAmigo(amigos, 'toni');
 // No modifiques nada debajo de esta linea //
 
 module.exports = buscarAmigo

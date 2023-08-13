@@ -14,7 +14,24 @@ function numeroSimetrico(num) {
 
   // Tu código:
 
+  var n=0,j=0;
+   var cadena = num.toString();
+   cadena=cadena.split("");
+   n=cadena.length;
+   for(let i=0;i<n;i++){
+  
+   if(cadena[n-1-i]===cadena[i]){
+      j++;
+   }
+   else {console.log(false);
+      break;}
+   }
+
+   if (n===j) console.log(true);
+
 }
+
+numeroSimetrico(11711);
 
 // No modifiques nada debajo de esta linea //
 

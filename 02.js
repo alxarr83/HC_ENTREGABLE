@@ -12,8 +12,37 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
-}
+  var arrayLengths=[],n;
+  let i=0,j=0,c=0;
 
+  n=strings.length;
+
+  for (i=0;i<n;i++){
+    arrayLengths[i]=strings[i].length;
+  }
+  
+  for (i=0;i<n;i++){
+    for (j=0;j<n;j++){
+      if(arrayLengths[i]>arrayLengths[j]){
+        c=arrayLengths[j];
+        arrayLengths[j]=arrayLengths[i];
+        arrayLengths[i]=c;
+
+      }
+      //else strings[i]=strings[i];
+      
+      
+    }
+        
+  }
+  console.log(arrayLengths);
+
+  for (i=0;i<n;i++){
+    if(strings[i].length==arrayLengths[0])
+    console.log(strings[i])
+  }
+}
+stringMasLarga(strings=['alejandro','paragaricutirimicuaro','a','solo','pi','exacto']);
 // No modifiques nada debajo de esta linea //
 
 module.exports = stringMasLarga

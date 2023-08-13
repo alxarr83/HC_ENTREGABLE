@@ -24,8 +24,46 @@ function filtrar(funcion) {
   // productos.filtrar(function(p) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
+  
+  var n=funcion.length,j=0;
+  var arrayF=[];
+
+    for(let i=0;i<n;i++){
+   // console.log(funcion[i]);
+    if(funcion[i]===true){
+      arrayF[j]=productos[i];
+      j++;
+    }
+  }
+   console.log(arrayF);
+    return arrayF;
+  
+ 
+   
 
 };
+
+Array.prototype.p =function (array,propiedad)
+{
+  var array1=[];
+  var n=array.length;
+  for(let i=0;i<n;i++){
+    if (array[i][propiedad]>=50){
+      array1[i]=true;
+      //console.log(array1[i]);
+    }
+      else array1[i]=false;
+}
+console.log(array1);
+return array1;
+}
+
+var productos = [{price: 100,name: 'tv'}, {price: 50,name: 'phone'}, {price: 30,name: 'lamp'}] 
+var NA=productos.p(productos,'price');
+filtrar(productos.p(productos,'price'));
+
+// [{price: 100, name:'tv'}];
+
 
 // No modifiques nada debajo de esta linea //
 
